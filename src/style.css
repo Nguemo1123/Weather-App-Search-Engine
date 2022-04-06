@@ -37,3 +37,13 @@ li {
 .source-code {
   text-align: center;
 }
+:hover.source-code {
+  text-decoration: underline;
+  color: blueviolet;
+}
+.city-form {
+  position: fixed;
+  right: 0;
+  top: 10px;
+  background: transparent;
+}
