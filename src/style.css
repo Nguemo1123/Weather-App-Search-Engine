@@ -26,9 +26,14 @@ li {
 }
 .weather-app strong {
   font-size: 25px;
+  font-weight: 300px;
+  line-height: 1;
 }
 .unit {
   position: relative;
   font-size: 16px;
   top: -20px;
+}
+.source-code {
+  text-align: center;
 }
