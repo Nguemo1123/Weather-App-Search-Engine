@@ -13,6 +13,7 @@ li {
   display: block;
   line-height: 19px;
   margin-top: 10px;
+  text-transform: capitalize;
 }
 img.background {
   position: fixed;
