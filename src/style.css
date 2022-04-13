@@ -58,3 +58,9 @@ img.background {
   background: transparent;
   margin-top: 10px;
 }
+#weather-image {
+  background-image: url("images/clouds/1554323659436.gif");
+  background-repeat: repeat;
+  background-size: 50% 50%;
+  width: auto;
+}
