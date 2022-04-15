@@ -47,9 +47,17 @@ img.background {
 .source-code {
   text-align: center;
 }
+.weather-forecast {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: 75px;
+}
 :hover.source-code {
   text-decoration: underline;
   color: blueviolet;
+}
+#forecast-date {
+  text-decoration: underline;
 }
 #search-form {
   position: fixed;
