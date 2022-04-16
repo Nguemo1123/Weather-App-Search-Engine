@@ -52,6 +52,7 @@ img.background {
   margin-top: 15px;
   margin-left: 75px;
 }
+
 :hover.source-code {
   text-decoration: underline;
   color: blueviolet;
@@ -71,4 +72,8 @@ img.background {
   background-repeat: repeat;
   background-size: 50% 50%;
   width: auto;
+}
+#navigate {
+  left: 0;
+  top: 10px;
 }

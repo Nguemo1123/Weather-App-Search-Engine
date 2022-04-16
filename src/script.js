@@ -21,6 +21,28 @@ function formatDate(timestamp) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast() {
+  let forecastElment = document.querySelector("#forecast");
+  forecastHTML = `<div class="row">`;
+  let days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" id="forecast-date">${day}</h5>
+    <p class="card-text">❄</br> <div class="forecast-temperature"><span class="temp-max"> -10°c</span> | <span class="temp-min"> -10°c</span></div></p>
+    <a href="#" class="btn btn-primary">See More</a>
+  </div>
+</div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElment.innerHTML = forecastHTML;
+}
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -83,3 +105,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 search("Toronto");
+displayForecast();
