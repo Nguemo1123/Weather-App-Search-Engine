@@ -42,13 +42,13 @@ function displayForecast(response) {
 
   let forecastElment = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row">`;
+  let forecastHTML = `<div class="row gx-2 gy-5">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col-sm-2">
+    <div class="col-2">
       <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title" id="forecast-date">${formatDay(forecastDay.dt)}</h5>
@@ -59,7 +59,6 @@ function displayForecast(response) {
         )}°c</span> | <span class="temp-min"> ${Math.round(
           forecastDay.temp.min
         )}°c</span></div></p>
-    <a href="#" class="btn btn-primary">See More</a>
   </div>
    </div>
 </div>
@@ -84,6 +83,7 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let feelsLikeElement = document.querySelector("#feels-like");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
@@ -94,6 +94,7 @@ function displayTemperature(response) {
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  feelsLikeElement.innerHTML = `${Math.round(response.data.main.feels_like)}℃`;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
