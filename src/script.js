@@ -48,7 +48,7 @@ function displayForecast(response) {
       forecastHTML =
         forecastHTML +
         `
-    <div class="col-2">
+    <div class="col-sm-2">
       <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title" id="forecast-date">${formatDay(forecastDay.dt)}</h5>
@@ -61,6 +61,7 @@ function displayForecast(response) {
         )}°c</span></div></p>
     <a href="#" class="btn btn-primary">See More</a>
   </div>
+   </div>
 </div>
 `;
     }
