@@ -1,6 +1,10 @@
 body {
   font-family: monospace;
-  overflow: hidden;
+  background: radial-gradient(
+    621px at 25.3% 13.8%,
+    rgb(255, 255, 255) 0%,
+    rgb(234, 236, 255) 90%
+  );
 }
 
 h1 {
@@ -41,25 +45,21 @@ li {
   margin-bottom: 10px;
   margin-top: 20px;
 }
-.weather-app strong {
-  font-size: 25px;
-  font-weight: 300px;
-  line-height: 1;
-}
+
 .unit {
   position: relative;
-  font-size: 24px;
+  font-size: 15px;
   top: -20px;
 }
 .source-code {
   text-align: center;
+  margin-bottom: 20px;
 }
-.weather-forecast {
+.weather-forecast,
+.card-body {
   position: relative;
   text-align: center;
-  margin-left: 15px;
-  opacity: 0.6;
-  padding-top: 30px;
+  padding-top: 10%;
 }
 
 :hover.source-code {
@@ -71,13 +71,18 @@ li {
 }
 #search-form {
   position: fixed;
+  display: flex;
   right: 0;
   top: 10px;
   background: transparent;
-  margin-top: 10px;
+  margin: 10px 10px;
+  min-width: 0px;
 }
 
 #navigate {
   left: 0;
   top: 10px;
+}
+#temperature {
+  font-size: 30px;
 }
